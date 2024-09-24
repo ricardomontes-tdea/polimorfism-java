@@ -4,6 +4,8 @@
 
 package com.mycompany.polimorfism;
 
+import java.util.*;
+
 /**
  *
  * @author Ricardo
@@ -11,6 +13,15 @@ package com.mycompany.polimorfism;
 public class Polimorfism {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        List<GeometricForm> forms = Arrays.asList(
+            new Square(10, 4, 10),
+            new Rectangle(3, 4, 8),
+            new Triangle(10, 3, 15)
+        );
+        
+        for(GeometricForm form : forms){
+            System.out.println(form.getArea());
+        }
+                
     }
 }
